@@ -221,7 +221,7 @@ async function trackAsync({log, file, forceWait}, fn) {
 trackAsync[dontTrack] = true;
 
 async function migrate(params = {}) {
-	const {path: dir, projectId, storageBucket, dryrun, app, debug = false, require: req, forceWait = false} = params;
+	let {path: dir, projectId, storageBucket, dryrun, app, debug = false, require: req, forceWait = false} = params;
 
 	if (req) {
 		try {
